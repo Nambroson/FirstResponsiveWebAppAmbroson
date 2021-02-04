@@ -1,0 +1,34 @@
+﻿
+@model FirstResponsiveWebAppAmbroson.Models.FirstResponsiveWebAppModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <form asp-action="Index" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label">Name:</label>
+            <input asp-for="Name" />
+        </div>
+        <div class="form-group">
+            <label asp-for="BirthYear" class="control-label">Birth Year:</label>
+            <input asp-for="BirthYear" />
+        </div>
+        <div>
+            <label>Age at the end of this year, <input value="@ViewBag.Name" readonly /> will be:</label>
+            <input value="@ViewBag.Age" readonly />
+        </div>
+        <button type="submit">Calculate</button>
+        <a asp-action="Index">Clear</a>
+    </form>
+</body>
+</html>
