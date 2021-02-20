@@ -22,7 +22,7 @@ namespace FirstResponsiveWebAppAmbroson.Models
             }
         }
         
-        [YearRange(0, ErrorMessage = "Please enter a valid birth year")]
+        [YearRange(1900, ErrorMessage = "Please enter a valid birth year")]
         [Required(ErrorMessage = "Please enter your birth year")]
         public int BirthYear { get; set; }
 
